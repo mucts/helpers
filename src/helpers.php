@@ -588,7 +588,7 @@ if (!function_exists('correct_strtotime')) {
     }
 }
 
-if (!function_exists('http_request')) {
+if (!function_exists('api_request')) {
     /**
      * HTTP网络请求
      *
@@ -604,7 +604,7 @@ if (!function_exists('http_request')) {
      * @throws ResponseException
      * @throws Exception
      */
-    function http_request(string $uri, string $method, array $options = [], array $headers = [], string $contentType = "json", $timeOut = 15, $ipSpoofing = true): ?StreamInterface
+    function api_request(string $uri, string $method, array $options = [], array $headers = [], string $contentType = "json", $timeOut = 15, $ipSpoofing = true): ?StreamInterface
     {
         if ($ipSpoofing) {
             $ip      = ipv4_random();
