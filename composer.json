@@ -1,0 +1,29 @@
+{
+    "name": "mucts/helpers",
+    "description": "个人常用方法，如身份证验证",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "ext-json": "^8.0",
+        "ext-bcmath": "^8.0",
+        "ext-mbstring": "^8.0",
+        "ext-openssl": "^8.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-iconv": "^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MuCTS\\Helpers\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Herry",
+            "email": "yuandeng@aliyun.com"
+        }
+    ]
+}
