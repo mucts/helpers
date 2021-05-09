@@ -622,3 +622,35 @@ if (!function_exists('api_request')) {
         return $response ? $response->getBody() : null;
     }
 }
+
+if (!function_exists('aes_encrypt')) {
+    /**
+     * AES加密
+     *
+     * @param $str
+     * @param $key
+     * @return string
+     */
+    function aes_encrypt($str, $key): string
+    {
+        $key  = substr(openssl_digest(openssl_digest($key, 'sha1', true), 'sha1', true), 0, 16);
+        $data = openssl_encrypt($str, 'AES-128-ECB', $key, OPENSSL_RAW_DATA);
+        return base64_encode($data);
+    }
+}
+
+if (!function_exists('aes_decrypt')) {
+    /**
+     * AES解密
+     *
+     * @param $str
+     * @param $key
+     * @return bool|string
+     */
+    function aes_decrypt($str, $key): bool|string
+    {
+        $key  = substr(openssl_digest(openssl_digest($key, 'sha1', true), 'sha1', true), 0, 16);
+        $data = base64_decode($str);
+        return openssl_decrypt($data, 'AES-128-ECB', $key, OPENSSL_RAW_DATA, '');
+    }
+}
