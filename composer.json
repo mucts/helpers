@@ -3,13 +3,13 @@
     "description": "个人常用方法，如身份证验证",
     "type": "library",
     "require": {
-        "php": "^8.0",
-        "ext-json": "^8.0",
-        "ext-bcmath": "^8.0",
-        "ext-mbstring": "^8.0",
-        "ext-openssl": "^8.0",
-        "guzzlehttp/guzzle": "^7.2",
-        "ext-iconv": "^8.0"
+        "php": "^8.1",
+        "ext-json": "^8.1",
+        "ext-bcmath": "^8.1",
+        "ext-mbstring": "^8.1",
+        "ext-openssl": "^8.1",
+        "guzzlehttp/guzzle": "^7.4",
+        "ext-iconv": "^8.1"
     },
     "license": "MIT",
     "autoload": {
